@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.principal {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 468px) {
+  .principal {
+    grid-template-columns: repeat(4, calc(25% - 0.75rem));
+    grid-template-areas: "header header header header" "main main main aside" "main main main aside" "footer footer footer footer";
+  }
+}
+.principal header {
+  background-color: salmon;
+}
+@media (min-width: 468px) {
+  .principal header {
+    grid-area: header;
+  }
+}
+.principal main {
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+@media (min-width: 468px) {
+  .principal main {
+    grid-area: main;
+  }
+}
+.principal main article {
+  background-color: violet;
+  margin: 5px;
+  padding: 10px;
+}
+.principal main article img {
+  width: 100%;
+}
+.principal aside {
+  background-color: lightblue;
+}
+@media (min-width: 468px) {
+  .principal aside {
+    grid-area: aside;
+  }
+}
+.principal footer {
+  background-color: blue;
+}
+@media (min-width: 468px) {
+  .principal footer {
+    grid-area: footer;
+  }
+}

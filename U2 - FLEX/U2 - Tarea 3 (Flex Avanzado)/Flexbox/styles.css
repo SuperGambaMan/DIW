@@ -1,0 +1,182 @@
+/* Estilos generales */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+}
+
+#contenedor{
+    background-color: white;
+    display: flex;
+    flex-direction: column; 
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+.menu{
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Para que al pasar el raton por los li se vea el fondo */
+.menu li:hover{
+    background-color: #003169;
+}
+
+#contenedor-nav{
+    color: white;
+    background-color: #0066da;
+}
+
+/* Seccion con menu sencillo */
+.menu li{
+    color: white;
+    background-color: #0066da;
+    padding: 10px;
+
+    flex-grow: 1;
+}
+
+
+/* Seccion con iconos */
+.iconos li {
+    display: flex;  
+    justify-content: center;
+}
+
+.iconos i{
+    font-size: 32px;
+    margin-right: 10px;
+}
+
+.iconos section{
+    flex-direction: column;
+}
+
+/* Seccion con dropdown */
+.dropdown-menu{
+    text-align: left;
+
+}
+
+.submenu:hover li{
+    background-color: #003169;
+}
+
+.submenu li:hover{
+    background-color: #ff5e62;
+    z-index: 0;
+}
+
+/* Seccion Redes Sociales */
+
+/* Para que al pasar el raton por iconos se vean de otro color*/
+.sociales{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 50%;
+}
+
+.sociales i{
+    font-size: 20px;
+    padding: 10px;
+}   
+
+.sociales li:hover{
+    background-color: #003169;
+}
+/* Dropdown con Redes Sociales*/
+.conjunto{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.ul1{
+    flex-basis: 50%;
+    text-align: left;
+}
+
+.ul2{
+    justify-content: flex-end;
+    align-items:flex-start;
+    flex-wrap: wrap;
+}
+
+/* Footer aparece cuando es modo escritorio */
+footer{
+    background-color: white;
+    max-width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+/* Media Queries */
+/* Tablet */
+@media screen and (min-width: 480px){
+    /* Iconos 2 por fila */
+    .iconos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .iconos li {
+        flex-grow: 1;
+        flex-basis: 33%;
+    }
+
+}
+
+
+/*Escritorio */
+@media screen and (min-width: 768px){
+    #contenedor{
+        margin: 0px auto;
+    }
+
+.menu{
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Dropdown desplegable*/
+    .dropdown{
+        position: relative; /*Marcamos la posidicon relativa del padre*/
+    }
+    
+    .submenu{
+        display: none;
+    }
+
+    .dropdown:hover .submenu{
+        display: block;
+        position: absolute; /* Posicion absoluta del padre */
+        left: 0px;
+        top: 100%;
+        width: 100%;
+    }
+
+     .iconos {
+        flex-wrap:nowrap;
+    }
+
+    .iconos li {
+        flex-grow: 0;
+   }
+    
+   /* Redes Sociales */
+    .sociales i{
+    font-size: 24px;
+    padding: 10px;
+    }   
+
+}

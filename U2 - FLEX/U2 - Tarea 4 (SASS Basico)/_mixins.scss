@@ -1,0 +1,14 @@
+@mixin dispositivo($disp){
+    @media  (min-width: $disp){
+        @content;
+    }
+}
+
+@mixin generarBoton($color, $colorLetra ,$tamano){
+    flex-direction: row;
+    background-color: $color;
+    color: $colorLetra;
+    padding: $tamano;
+    font-size: 15px;
+}
+

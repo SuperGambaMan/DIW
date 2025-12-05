@@ -1,0 +1,21 @@
+//REDIMENSION DISPOSITIVOS RESOLUCION SUPERIOR
+@mixin dispositivo($disp){
+    @media  (min-width: $disp){
+        @content;
+    }
+}
+
+//REDIMENSION DISPOSITIVOS RESOLUCION INFERIOR
+@mixin dispositivoDown($disp){
+    @media  (max-width: $disp){
+        @content;
+    }
+}
+
+// GENERADOR DE BOTONES DE DIFERENTES COLORES
+@mixin generarBoton($color, $colorLetra ,$tamano){
+    background-color: $color;
+    color: $colorLetra;
+    padding: $tamano;
+    font-size: 15px;
+}

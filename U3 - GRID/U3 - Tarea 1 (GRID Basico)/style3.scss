@@ -1,0 +1,66 @@
+// Importar dependencias
+@import "_variables";
+@import "_mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.principal {
+  display: grid;
+  
+  @include dispositivo($tablet) {
+    grid-template-columns: repeat(4, calc(25% - 3rem/4));
+    grid-template-areas:
+      "header header header header"
+      "main main main aside"
+      "main main main aside"
+      "footer footer footer footer";
+  }
+  gap: 1rem;
+
+  header {
+    background-color: salmon;
+    @include dispositivo($tablet) {
+      grid-area: header;
+    }
+  }
+
+  main {
+    background-color: red;
+    display: grid;
+    @include dispositivo($tablet) {
+      grid-area: main;
+    }
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    article {
+      background-color: violet;
+      margin: 5px;
+      padding: 10px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  aside {
+    background-color: lightblue;
+    @include dispositivo($tablet) {
+      grid-area: aside;
+    }
+  }
+
+  footer {
+    background-color: blue;
+    @include dispositivo($tablet) {
+      grid-area: footer;
+    }
+  }
+}

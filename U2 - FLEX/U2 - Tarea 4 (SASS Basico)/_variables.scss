@@ -1,0 +1,19 @@
+
+// Colores
+$color-boton: #007bff;
+$color-letra-boton: #ffffff;
+$color-fondo: #b6b6b6;
+$color-contenedor: #f8f9fa;
+$color-texto: #212529;
+$color-resaltado: #ea00ff;
+
+// Tamaños
+$tamano-boton: 10px;
+
+//Tamaños QUERIES
+$tablet: 468px;
+$escritorio: 768px;
+
+// etiquetas
+$tamanio-etiqueta-tablet: calc( 100%/2 - 1rem/2);
+$tamanio-etiqueta-escritorio: calc( 100%/3 - 2rem/3);

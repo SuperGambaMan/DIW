@@ -1,0 +1,26 @@
+
+// Colores
+$color-boton-article: #2f90f8;
+$color-boton-menu: #8a1548;
+$color-fondo: #ffffff;
+$color-letra: #ffffff;
+$color-contenedor: #f8f9fa;
+$color-texto-articulo: #808080;
+$color-fondo-footer: #131313;
+
+$gradiente: linear-gradient(to right,#ad1457,#ca3e3e);
+
+// Tamaños
+$tamano-boton: 10px;
+
+//Tamaños QUERIES
+$movil: 280px;
+$tablet: 480px;
+$escritorio: 762px;
+
+// etiquetas
+
+$tamanio-etiqueta-movil: calc( 100%/2 - 1rem/2);
+$tamanio-etiqueta-tablet: calc( 100%/3 - 2rem/3);
+$tamanio-etiqueta-escritorio: calc( 100%/4 - 3rem/4);
+

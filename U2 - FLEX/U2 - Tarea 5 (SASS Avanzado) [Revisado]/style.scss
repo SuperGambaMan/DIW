@@ -1,0 +1,239 @@
+// Importar dependencias
+@import "_variables";
+@import "_mixins";
+
+/* ==== GENERAL ==== */
+* {
+  margin: 0;
+  padding: 0;
+  border:0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $color-fondo;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ==== HEADER ==== */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+
+  .menu {
+    .submenu {
+      display: none;
+    }
+    position: relative;
+    &:hover .submenu {
+      position: absolute;
+      right: 0;
+      top: 100%;
+      background-color: $color-fondo;
+      padding: 10px;
+
+      display: flex;
+      flex-direction: column;
+      }
+
+      .flexbox{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+      }
+
+      button {
+        @include generarBoton($color-boton-menu, $color-letra, $tamano-boton);
+      }
+    }
+  }
+
+/* ==== HERO ==== */
+.fondo-img {
+  background-image: url(img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+
+  color: $color-letra;
+
+  display: flex;
+  align-items: center;
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  h1{
+    padding: 1rem;
+  }
+
+  p{
+    padding: 1rem;
+  }
+
+  .form{
+    display: flex;
+    @include dispositivo ( $tablet ){
+        flex-direction: row;
+
+    }
+  }
+
+  form{
+    padding: 1rem;
+    input{
+      flex-grow: 1;
+      padding: 10px;
+      @include dispositivo ( $tablet ){
+        flex:0 0 40%;
+      }
+    }
+
+    button{
+      flex-grow: 0;
+    }
+  }
+}
+
+/* ==== ICONOS ==== */
+.color-fondo {
+  background: $gradiente;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    li {
+      padding: 1rem;
+      color: $color-letra;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+
+        flex-basis: 15%;
+
+      }
+
+      p{
+        flex-grow: 1;
+      }
+    }
+
+    @include dispositivo ( $escritorio ){
+      flex-direction: row;
+      justify-content: space-around;
+    }  
+  }
+}
+
+/* ==== CURSOS ==== */
+main h2 {
+  margin: 1rem;
+  text-align: center;
+}
+
+.articulos {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  article {
+    border: solid 1px rgb(182, 182, 182); 
+    margin-bottom: 1rem;
+
+    flex-basis: $tamanio-etiqueta-movil;
+    display: flex;
+    flex-direction: column;
+
+    img:first-of-type {
+      width: 100%;
+    }
+
+    h3{
+      margin: 0.5rem;
+    }
+
+    p:nth-of-type(1) {
+      padding: 0.5rem;
+      color: $color-texto-articulo;
+    }
+
+    img:nth-of-type(2) {
+      padding: 0.5rem;
+
+    }
+
+    p:nth-of-type(2) {
+      padding: 0.5rem;
+      text-decoration: line-through;
+      color: $color-texto-articulo;
+    }
+
+    p:nth-of-type(3) {
+      padding: 0.5rem;
+
+      display: flex;
+      justify-content: flex-end;
+      font-weight: bold;
+    }
+
+    button {
+      width: 90%;
+      margin-bottom: 0.5rem;
+      align-self: center;
+
+      @include generarBoton($color-boton-article, $color-letra, $tamano-boton);
+    }
+
+    @include dispositivoDown($movil){
+      flex-basis: 100%;
+    }
+
+    @include dispositivo($tablet){
+      flex-basis: $tamanio-etiqueta-tablet;
+    }
+
+    @include dispositivo($escritorio){
+      flex-basis: $tamanio-etiqueta-escritorio;
+    }
+  }
+}
+
+/* ==== FOOTER ==== */
+.fondo-footer {
+  background: $color-fondo-footer;
+  color: $color-letra;
+  padding: 2rem;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+
+    .footer-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex: 1 0 50%;
+
+      @include dispositivo($escritorio){
+        flex: 0 0 25%;
+      }
+    }
+  }
+}
+

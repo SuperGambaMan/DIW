@@ -1,0 +1,119 @@
+body{
+
+    color:  white;
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+}
+
+#contenedor{
+    background-color: white;
+    display: flex;
+    flex-direction: column; 
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+header{
+    border: solid 10px white;
+    background-color: rgb(0, 162, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    padding: 10px;
+    font-size: 20px;
+}
+
+nav{
+    padding: 10px;
+    flex-basis: 30%;
+}
+
+nav ul{
+    list-style: none;
+    font-size: 12px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main{
+    border: solid 5px white;
+    display: flex;
+    flex-direction: row;
+}
+
+#servicios{
+    border: solid 5px white;
+    display: flex;
+    flex-basis: 60%;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.grow1{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicios1{
+    background-color: brown;
+}
+
+.servicios2{
+    background-color: purple;
+}
+
+.servicios3{
+    background-color: rgb(13, 13, 139);
+}
+
+aside{
+    border: solid 5px white;
+    background-color: rgb(0, 162, 255);
+    flex-grow:1;
+}
+
+h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside ul{
+    flex-direction: column;
+    align-items: start;
+}
+
+footer{
+    border: solid 10px white;
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Esto es para cambiar el aspecto en referencia al 
+    tamaño de pantalla (Diferentes dispositivos)*/
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+    }
+
+    /* MAIN pasa a ser columna */
+    main {
+        flex-direction: column-reverse;
+    }
+}
+

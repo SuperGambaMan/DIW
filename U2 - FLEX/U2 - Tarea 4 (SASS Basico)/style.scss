@@ -1,0 +1,75 @@
+// Importar dependencias
+@import '_variables';
+@import '_mixins';
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+img{
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+body{
+    background-color: $color-fondo;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin:0 auto;
+    padding: 10px;
+    max-width: 1100px;
+
+    @include dispositivo($tablet){
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+}
+
+article{
+    background-color: $color-contenedor;
+    text-align: center;
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include dispositivo($tablet){
+        flex-basis: $tamanio-etiqueta-tablet;
+    }
+
+    @include dispositivo($escritorio){
+        flex-basis: $tamanio-etiqueta-escritorio;
+    }
+     
+}
+
+p{
+    margin-bottom: 10px;
+}
+
+h2{
+    margin: 10px;
+}
+
+
+span{
+    color: $color-resaltado;
+}
+
+button{
+    @include generarBoton($color-boton,$color-letra-boton,$tamano-boton);
+    margin-bottom: 10px;
+}

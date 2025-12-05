@@ -1,0 +1,143 @@
+body{
+
+    color:  white;
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+}
+
+#contenedor{
+    border: 10px solid white;
+    background-color: white;
+    display: flex;
+    flex-direction: column; 
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+header{
+    /* Primero vista con movil */
+    display: flex;
+    flex-direction: column;
+    /* en este caso lo pondremos por que nos interesa pra la vista de escritorio*/
+    align-items: center; 
+
+
+    border: 10px solid white;
+    background-color: rgb(0, 162, 255);
+
+    /* Luego vista con tablet y pc */
+    @media (min-width: 480px){
+        flex-direction: row;
+        justify-content: space-between;
+    };
+
+
+    
+    
+    display: flex;
+
+    
+    
+}
+
+#logo{
+    font-size: 20px;
+}
+
+nav{
+    border: 5px solid red;
+    display: flex;
+    flex-direction: row;
+    @media (min-width: 480px){
+        
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+}
+
+nav ul{
+    background-color: #ff9966;
+    list-style: none;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    
+}
+
+main{
+    border: 5px solid white;
+    display: flex;
+    flex-direction: row;
+}
+
+#servicios{
+    border: 5px solid white;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 60%;
+    align-items: flex-start;
+}
+
+.grow1{
+    
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.servicios1{
+    background-color: brown;
+}
+
+.servicios2{
+    background-color: purple;
+}
+
+.servicios3{
+    background-color: rgb(13, 13, 139);
+}
+
+aside{
+    border: 5px solid white;
+    background-color: rgb(0, 162, 255);
+    flex-grow:1;
+    display:flex;
+    flex-direction: column;
+}
+h2{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+
+}
+aside ul{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+footer{
+    border: 10px solid white;
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Esto es para cambiar el aspecto en referencia al 
+    tamaño de pantalla (Diferentes dispositivos)*/
+    /*
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        flex-direction: column-reverse;
+    }
+}*/
+
+
