@@ -1,0 +1,5 @@
+@mixin dispositivo($disp){
+    @media  (min-width: $disp){
+        @content;
+    }
+}
