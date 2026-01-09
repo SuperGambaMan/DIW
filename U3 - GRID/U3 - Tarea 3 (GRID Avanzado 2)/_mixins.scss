@@ -3,3 +3,11 @@
         @content;
     }
 }
+
+// GENERADOR DE BOTONES DE DIFERENTES COLORES
+@mixin generarBoton($color, $colorLetra ,$tamano){
+    background-color: $color;
+    color: $colorLetra;
+    padding: $tamano;
+    font-size: 15px;
+}
