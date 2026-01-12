@@ -29,30 +29,32 @@ h3 {
 /* =========== HEADER ========== */
 .fondoCabecera {
   background-color: #7abe47;
+}
+.fondoCabecera .contenedor {
   /* ====== NAVEGADOR ====== */
 }
-.fondoCabecera .logo {
-  padding: 1rem 0 1rem;
-}
-.fondoCabecera .logo img {
-  max-width: 100%;
-}
-.fondoCabecera .navegador {
-  color: white;
-}
-.fondoCabecera .navegador ul {
-  display: grid;
-}
-@media (min-width: 768px) {
-  .fondoCabecera .navegador ul {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+@media (min-width: 700px) {
+  .fondoCabecera .contenedor {
+    display: grid;
+    grid-template-columns: 30% auto 30%;
     text-align: center;
   }
 }
-.fondoCabecera .navegador ul li {
+.fondoCabecera .contenedor .logo img {
+  max-width: 100%;
+}
+.fondoCabecera .contenedor .navegador {
+  color: white;
+  grid-column: 3/4;
+}
+.fondoCabecera .contenedor .navegador ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.fondoCabecera .contenedor .navegador ul li {
   padding: 1rem 0 1rem;
 }
-.fondoCabecera .navegador ul li:hover {
+.fondoCabecera .contenedor .navegador ul li:hover {
   background-color: #57a42b;
 }
 
@@ -62,7 +64,19 @@ h3 {
   display: grid;
   margin-top: 1rem;
 }
+@media (min-width: 700px) {
+  .nosotros {
+    grid-template-columns: 50% 50%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nosotros .texto {
+    margin: 2rem;
+  }
+}
 .nosotros img {
+  margin-bottom: 1rem;
   max-width: 100%;
 }
 
@@ -73,9 +87,33 @@ h3 {
   gap: 1rem;
   /* -------- ESTILO PRINCIPAL -------- */
 }
+.articulos .destacado {
+  grid-column: 1/3;
+}
+@media (min-width: 480px) {
+  .articulos .destacado {
+    grid-template-columns: 1fr 1fr;
+  }
+  .articulos .destacado img {
+    grid-column: 1/2;
+  }
+  .articulos .destacado .texto {
+    grid-column: 2/3;
+  }
+}
 .articulos .articulo {
-  padding-bottom: 1rem;
+  display: grid;
+  margin-bottom: 1rem;
+  border: 1px solid gray;
   background-color: #ffffff;
+}
+.articulos .articulo img {
+  max-width: 100%;
+}
+.articulos .articulo .texto {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
 }
 .articulos .articulo img {
   max-width: 100%;
@@ -91,8 +129,8 @@ h3 {
   color: #ffffff;
   padding: 1rem;
   font-size: 15px;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 .articulos .articulo .btn:hover {
   background-color: #ffffff;
@@ -100,19 +138,74 @@ h3 {
   padding: 1rem;
   font-size: 15px;
 }
+@media (min-width: 700px) {
+  .articulos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .articulos .destacado {
+    grid-column: 1/3;
+  }
+  .articulos .casa2 {
+    grid-column: 3/4;
+  }
+  .articulos .casa3 {
+    grid-column: 1/2;
+  }
+  .articulos .casa4 {
+    grid-column: 2/3;
+  }
+  .articulos .casa5 {
+    grid-column: 3/4;
+  }
+}
 
 /* ================ FOOTER =================== */
 .footer {
   background-color: #7abe47;
   color: #ffffff;
-  text-align: center;
 }
 .footer .articulos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  padding: 1rem 0 1rem;
 }
-.footer .abajoF {
+@media (min-width: 700px) {
+  .footer .articulos {
+    grid-template-columns: 30%, 20%, 2fr;
+  }
+  .footer .articulos .fArtNosotros {
+    grid-column: 1/2;
+  }
+  .footer .articulos .fArtNavegacion {
+    grid-column: 2/3;
+  }
+  .footer .articulos .fArtCasasVenta {
+    grid-column: 3/4;
+    display: grid;
+  }
+  .footer .articulos .fArtCasasVenta .casasVenta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+.footer .articulos li {
+  display: grid;
+  grid-template-columns: 30% 1fr 1fr;
+}
+@media (min-width: 700px) {
+  .footer .articulos li {
+    grid-template-columns: 30% 1fr;
+    gap: 1rem;
+  }
+}
+.footer .articulos li img {
+  max-width: 100%;
+}
+.footer .articulos li p {
+  grid-column: 3/4;
+  align-self: center;
+}
+.footer .abajoFooter {
   background-color: #57a42b;
   padding: 1rem 0 1rem;
+  text-align: center;
 }
