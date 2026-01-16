@@ -1,0 +1,14 @@
+/*MIXIN PARA ADAPTAR A DISPOSITIVOS*/
+@mixin dispositivo($tamano) {
+    @media screen and (min-width:$tamano){
+        @content;
+    }
+}
+
+@mixin generarBoton ($colorBordeLetra, $colorFondo){
+    color: $colorBordeLetra;
+    background-color: $colorFondo;
+    border: solid 1px $colorBordeLetra;
+    padding: 1rem;
+}
+
