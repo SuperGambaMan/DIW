@@ -1,0 +1,31 @@
+//************      BODY        *******************//
+$fuente_principal: Arial, Helvetica, sans-serif;
+$color_body:#f2f2f2;
+
+//************      HEADER LOGO, MENU Y H1        *******************//
+$color_barra_header:#008fd1;
+$color_enlaces_a:white;
+$color_h1_header:#008fd1;
+$ancho_maximo_h1: 640px;
+$tamano_titulo_h1: 48px;
+
+//************      ENTRADAS        *******************//
+$fuente_titulo_entradas: 'Libre Baskerville', serif; // H3
+$grosor_titulo_entradas: 700; // H3
+$color_fecha_entrada:#db008d;
+$color_boton_entradas:#008fd1;
+
+//************       CATEGORIAS        *******************//
+$tamano_texto_categorias:.9rem;
+$color_categ_actividades:#008fd1;
+$color_categ_festivales:#db008d;
+$color_categ_restaurantes:#9800d1;
+$color_categ_tips:#eca300;
+
+//************      FOOTER         *******************//
+$tamano_titulo_footer: 1.6rem;
+
+//************      MEDIA QUERIES         *******************//
+$telefono : 480px;
+$tablet: 768px;
+$desktop: 1100px;

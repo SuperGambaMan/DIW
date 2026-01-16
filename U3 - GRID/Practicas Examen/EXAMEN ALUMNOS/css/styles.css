@@ -1,0 +1,167 @@
+/******** IMPORTAR DOCUMENTOS *************/
+/** Media Queries **/
+/******** LLAMADA A LAS MEDIA QUERIES  *******/
+/**** @include desktop(){ PROPIEDADES }   */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.contenedor {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  padding-top: 3rem;
+  position: relative;
+  background-color: #008fd1;
+}
+
+.hero {
+  background-image: url(../img/hero.jpg);
+  background-position: center center;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.barra .contenedor {
+  background-color: #008fd1;
+}
+
+.sociales ul li a {
+  text-decoration: none;
+}
+
+.sociales ul li a:before {
+  font-family: "Font Awesome 5 Brands";
+  color: white;
+  font-size: 2rem;
+}
+
+.sociales ul li a[href*="facebook.com"]::before {
+  content: "\f39e";
+}
+
+.sociales ul li a[href*="twitter.com"]::before {
+  content: "\f099";
+}
+
+.sociales ul li a[href*="youtube.com"]::before {
+  content: "\f431";
+}
+
+.sociales ul li a[href*="instagram.com"]::before {
+  content: "\f16d";
+}
+
+.sociales ul li a[href*="pinterest.com"]::before {
+  content: "\f231";
+}
+
+/***** HEADER *****/
+.header .contenedor {
+  /*** BARRA ***/
+  display: grid;
+  text-align: center;
+}
+@media only screen and (min-width: 1100px) {
+  .header .contenedor {
+    grid-template-columns: 20% auto 60%;
+  }
+}
+.header .contenedor .logo img {
+  max-width: 100%;
+}
+@media only screen and (min-width: 1100px) {
+  .header .contenedor .navegacion {
+    grid-column: 3/4;
+  }
+}
+.header .contenedor .navegacion ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header .contenedor .navegacion ul li {
+  position: relative;
+}
+.header .contenedor .navegacion ul li a {
+  display: block;
+  padding: 1rem;
+  color: white;
+}
+.header .contenedor .navegacion ul li:hover {
+  background-color: #00aaff;
+}
+.header .contenedor .navegacion ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #00aaff;
+  min-width: 100%;
+}
+.header .contenedor .navegacion ul li:hover ul {
+  display: block;
+}
+.header .header-contenido {
+  background-color: transparent;
+}
+.header .header-contenido h1 {
+  max-width: 640px;
+  font-size: 48px;
+  color: #008fd1;
+  text-transform: uppercase;
+}
+
+.categorias {
+  display: grid;
+}
+.categorias a {
+  display: grid;
+  text-align: center;
+  min-width: 250px;
+  font-size: 0.9rem;
+  background-color: #008fd1;
+}
+.categorias a .fas {
+  font-size: 3rem;
+}
+.categorias a .fa-map-pin {
+  background-color: #008fd1;
+}
+.categorias a .fa-music {
+  background-color: #db008d;
+}
+.categorias a .fa-utensils {
+  background-color: #9800d1;
+}
+.categorias a .fa-check {
+  background-color: #eca300;
+}/*# sourceMappingURL=styles.css.map */
