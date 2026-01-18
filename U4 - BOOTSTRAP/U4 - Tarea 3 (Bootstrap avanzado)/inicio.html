@@ -4,68 +4,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 1: bootstrap (Básico)</title>
+    <title>Tarea 3: Bootstrap (Avanzado)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="container-fluid">
-        <!-- HEADER -->
-        <div class="row bg-dark justify-content-center align-items-center p-3">
-            <div class="bg-warning text-center p-1 col-md-2">
-                LogoCorporativo
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+    <div class="container">
+        <div>
+            <a class="navbar-brand" href="#">
+                <img src="img/Logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                Bootstrap 5!
+            </a>
+        </div>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-md-center">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown" role="button" data-bs-toggle="dropdown">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item ml-md-3 text-white">
+                    +56 5 5555 5555
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ===== CARRUSEL ===== -->
+<div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/img1.jpg" class="d-block img-fluid opacity-75" alt="img1">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Título 1</h5>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Eius repellendus iure aperiam esse, excepturi sed. Dicta
+                    mollitia reiciendis illo, reprehenderit, error quam nulla,
+                    nihil quibusdam excepturi iusto fuga sapiente accusantium.
+                </p>
             </div>
         </div>
-        <div class="row bg-warning justify-content-center align-items-center p-5 ">
-            <div class="col-12 col-sm-6 col-md-8 bg-warning text-center m-5">
-                <h2 class="fs-1 fw-lighter">Lorem ipsum dolor</h2>
+        <div class="carousel-item">
+            <img src="img/img2.png" class="d-block img-fluid opacity-75" alt="img2">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Título 2</h5>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Blanditiis impedit.
-                </p>
-                <button class="bg-dark">
-                    <a class="link-underline link-underline-opacity-0 text-white" href="">Contacto</a>
-                </button>
-                
-            </div>
-        </div>
-        <!-- MAIN -->
-        <div class="row mt-5 mb-5">
-            <div class="col-md-4">
-                <h5 class="mb-4">Lorem ipsum, dolor</h5>
-                <img src="img/coche.jpg" alt="coche" class="img-fluid">
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque exercitationem cum, qui ab quo
-                    voluptate nesciunt natus dignissimos perspiciatis eveniet ad soluta provident quas reiciendis
-                    commodi enim debitis inventore? Cum.
-                </p>
-            </div>
-            <div class="col-md-4">
-                <h5 class="mb-4">Lorem ipsum, dolor</h5>
-                <img src="img/coche.jpg" alt="coche" class="img-fluid">
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque exercitationem cum, qui ab quo
-                    voluptate nesciunt natus dignissimos perspiciatis eveniet ad soluta provident quas reiciendis
-                    commodi enim debitis inventore? Cum.
-                </p>
-            </div>
-            <div class="col-md-4">
-                <h5 class="mb-4">Lorem ipsum, dolor</h5>
-                <img src="img/coche.jpg" alt="coche" class="img-fluid">
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque exercitationem cum, qui ab quo
-                    voluptate nesciunt natus dignissimos perspiciatis eveniet ad soluta provident quas reiciendis
-                    commodi enim debitis inventore? Cum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Placeat soluta rerum omnis itaque, iste, id quam cum eos
+                    eveniet nisi deleniti aperiam aspernatur, numquam labore.
+                    Obcaecati ducimus a aliquid unde.
                 </p>
             </div>
         </div>
-        <!-- FOOTER -->
-        <div class="row bg-dark justify-content-center align-items-center p-2">
-            <div class="text-center text-white">
-                Todos los derechos reservados
+        <div class="carousel-item">
+            <img src="img/img3.jpg" class="d-block w-100 opacity-75" alt="img3">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Título 3</h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam voluptatum error possimus eius veritatis vel et
+                    minima sequi reiciendis perferendis accusamus aut, cum
+                    quas optio repellendus ex dignissimos assumenda. Illo.
+                </p>
             </div>
         </div>
     </div>
-</body>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- ====== TITULO + TEXTO ====== -->
+<section class="container text-center my-5">
+    <h1 class="display-4 fw-light mb-4">
+        Lorem, ipsum dolor.
+    </h1>
+
+    <p class="text-info mx-auto p-2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Itaque illo rem rerum totam, animi atque a eaque voluptate
+        quidem autem officiis tenetur eius maxime quis,
+        porro expedita sint ex illum!
+    </p>
+</section>
+
+<!-- ====== CARDS ====== -->
+<section class="container mb-5">
+    <div class="row g-4">
+
+        <!-- CARD 1 -->
+        <div class="col-sm-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+                <img src="img/img1.jpg" class="card-img-top" alt="img1">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text text-muted">
+                        This is a longer card with supporting text below
+                        as a natural lead-in to additional content.
+                        This content is a little bit longer.
+                    </p>
+                    <button class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#modalInfo">
+                        Más información
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-sm-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+                <img src="img/img2.png" class="card-img-top" alt="img2">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text text-muted">
+                        This is a longer card with supporting text below
+                        as a natural lead-in to additional content.
+                        This content is a little bit longer.
+                    </p>
+                    <button class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#modalInfo">
+                        Más información
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="col-sm-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+                <img src="img/img3.jpg" class="card-img-top" alt="img3">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text text-muted">
+                        This is a longer card with supporting text below
+                        as a natural lead-in to additional content.
+                        This content is a little bit longer.
+                    </p>
+                    <button class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#modalInfo">
+                        Más información
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ====== TEXTO MODAL ====== -->
+<div class="modal fade" id="modalInfo" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Información</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ====== JUMBOTRON ====== -->
+<section class="bg-light py-5">
+    <div class="container jumbotron py-5">
+
+        <h1 class="display-4 fw-normal">
+            Hello, world!
+        </h1>
+
+        <p class="lead text-muted col-lg-8">
+            This is a simple hero unit, a simple jumbotron-style component
+            for calling extra attention to featured content or information.
+        </p>
+
+        <hr class="my-4">
+
+        <p class="text-muted col-lg-8">
+            It uses utility classes for typography and spacing to space
+            content out within the larger container.
+        </p>
+
+        <a class="btn btn-primary btn-lg" href="#" role="button">
+            Learn more
+        </a>
+
+    </div>
+</section>
+
+<!-- ====== TITULO + TEXTO ====== -->
+<section class="container text-center my-5">
+    <h1 class="display-4 fw-light mb-4">
+        Lorem, ipsum dolor.
+    </h1>
+
+    <p class="text-info mx-auto p-2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Itaque illo rem rerum totam, animi atque a eaque voluptate
+        quidem autem officiis tenetur eius maxime quis,
+        porro expedita sint ex illum!
+    </p>
+</section>
+
+<!-- ====== ACORDEÓN + IMAGEN ====== -->
+<section class="container my-5">
+    <div class="row g-4">
+
+        <!-- ACORDEÓN -->
+        <div class="col-md-6">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button bg-info text-white collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                            aria-controls="flush-collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion
+                            body.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button bg-info text-white collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                            aria-controls="flush-collapseTwo">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion
+                            body. Let’s imagine this being filled with some actual content.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button bg-info text-white collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion
+                            body. Nothing more exciting happening here in terms of content, but just filling up the
+                            space to make it look, at least at first glance, a bit more representative of how this would
+                            look in a real-world application.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGEN + LISTA -->
+        <div class="col-md-6">
+            
+
+            <ul class="list-group">
+                <img src="img/img1.jpg" class="img-fluid" alt="">
+                <li class="list-group-item bg-info text-white">Lorem ipsum dolor sit amet</li>
+                <li class="list-group-item">consectetur adipisicing elit.</li>
+                <li class="list-group-item">Quos esse sit repellendus earum</li>
+                <li class="list-group-item">reiciendis blanditiis nihil eaque</li>
+                <li class="list-group-item">molestiae nobis possimus alias omnis</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <p class="mb-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Et debitis at laborum accusantium nostrum in eos ex odit error atque vitae.
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>
